@@ -1,11 +1,29 @@
 # Vanilla Maven Web Application Archetype
 Very simple webapp archetype similar to `maven-archetype-webapp` but with common web related dependencies.
 
-# Usage
-
-    git clone https://github.com/victorskl/vanilla-archetype-webapp
-    
+# Build
+    git clone https://github.com/victorskl/vanilla-archetype-webapp    
     mvn clean install
+
+# Download
+
+* Go to [release tab](https://github.com/victorskl/vanilla-archetype-webapp/releases) and download the pre-built release version.
+
+## Install
+    mvn install:install-file \
+     -Dfile=vanilla-archetype-webapp-1.0.jar \
+     -DgroupId=com.sankholin \
+     -DartifactId=vanilla-archetype-webapp \
+     -Dversion=1.0 \
+     -Dpackaging=jar
+
+## Uninstall
+
+* Just delete it from local maven repository cache. 
+* Usually `/home/{username}/.m2/repository/com/sankholin` on Linux/Mac
+* Or `C:\Users\{username}\.m2\repository\com\sankholin` on Windows.
+
+# Usage
     
     mvn archetype:generate -DgroupId=com.example \
      -DartifactId=vanilla-tek \
